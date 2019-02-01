@@ -1,4 +1,4 @@
-!/usr/bin/env groovy
+#!/usr/bin/env groovy
 pipeline{
   
        agent any
@@ -25,7 +25,7 @@ pipeline{
            
                 sh 'docker -v'
                 sh'docker images' 
-                sh 'docker build --tag project .'
+                sh 'docker build --tag keycodeproject .'
      
               
             }
@@ -35,7 +35,7 @@ pipeline{
         stage('Run Application'){
             steps{
               echo "Something"
-              sh 'docker run -t project'
+              sh 'docker run -t keycode'
         
             }
         }
@@ -54,3 +54,5 @@ pipeline{
         }
     }
 }
+
+© 2019 GitHub, Inc.
